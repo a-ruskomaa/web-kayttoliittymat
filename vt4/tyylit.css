@@ -1,0 +1,164 @@
+body {
+    margin: 0px;
+    overflow: hidden;
+    background-color: black;
+}
+.heiluripalkki {
+    position: absolute;
+    left: -10vw;
+    top: 0;
+    width: 10vw;
+    height: 100vh;
+    z-index: 0;
+
+    animation: heiluri 6s alternate infinite ease-in-out;
+}
+.aaltopalkki {
+    position: absolute;
+    left: 0vw;
+
+    z-index: -2;
+
+    animation: aalto 15s infinite alternate ease-in-out;
+}
+.textscroller {
+    position: absolute;
+    left: calc(50vw - 350px);
+    bottom: calc(0vh - 45px);
+    z-index: 2;
+
+    animation: scroll 1s infinite normal linear;
+}
+.pollo {
+    position: absolute;
+    z-index: 1;
+}
+#pollo_Q1 {
+    right: 50vw;
+    bottom: 50vh;
+    animation: 6s ease-in 0ms infinite alternate pollo_Q1_frames;
+}
+#pollo_Q2 {
+    left: 50vw;
+    bottom: 50vh;
+    animation: 6s ease-in 0ms infinite alternate pollo_Q2_frames;
+}
+#pollo_Q3 {
+    right: 50vw;
+    top: 50vh;
+    animation: 6s ease-in 0ms infinite alternate pollo_Q3_frames;
+}
+#pollo_Q4 {
+    left: 50vw;
+    top: 50vh;
+    animation: 6s ease-in 0ms infinite alternate pollo_Q4_frames;
+}
+.pingu {
+    position: absolute;
+    z-index: -1;
+}
+#pingu_1 {
+    left: 0vw;
+    top: 0vw;
+    animation: 3s ease-in-out 0ms infinite alternate pingu1_frames;
+}
+#pingu_2 {
+    left: 0vw;
+    bottom: 0vw;
+    animation: 3s ease-in-out 0ms infinite alternate pingu2_frames;
+}
+
+@keyframes scroll {
+    from {
+        bottom: calc(0vh - 55px);
+    }
+    to {
+        bottom: calc(0vh - 10px);
+    }
+}
+
+@keyframes aalto {
+    from {
+        left: 0vw;
+    }
+    to {
+        left: calc(100vw - 70%);
+    }
+}
+
+@keyframes heiluri {
+    from {
+        left: -10vw;
+    }
+    to {
+        left: 105vw;
+    }
+}
+
+@keyframes pollo_Q1_frames {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(calc(-50vw + 100%), calc(-50vh + 100%));
+    }
+}
+@keyframes pollo_Q2_frames {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(calc(50vw - 100%), calc(-50vh + 100%));
+    }
+}
+@keyframes pollo_Q3_frames {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(calc(-50vw + 100%), calc(50vh - 100%));
+    }
+}
+@keyframes pollo_Q4_frames {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(calc(50vw - 100%), calc(50vh - 100%));
+    }
+}
+
+@keyframes pingu1_frames {
+    from {
+        transform: translate(0,0);
+        /* left: 0vh;
+        top: 0vh; */
+    }
+    50% {
+        transform: translate(calc(50vw - 50%), calc(100vh - 100%));
+        /* left: 50vh;
+        top: 0vh; */
+    }
+    to {
+        transform: translate(calc(100vw - 100%), 0vh);
+        /* left: 100vh;
+        top: 0vh; */
+    }
+}
+@keyframes pingu2_frames {
+    from {
+        transform: translate(0,0);
+        /* left: 0vh;
+        top: 0vh; */
+    }
+    50% {
+        transform: translate(calc(50vw - 50%), calc(-100vh + 100%));
+        /* left: 50vh;
+        top: 0vh; */
+    }
+    to {
+        transform: translate(calc(100vw - 100%), 0vh);
+        /* left: 100vh;
+        top: 0vh; */
+    }
+}

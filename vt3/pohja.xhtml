@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fi" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi">
+
+<head>
+    <!-- head-osan sisältöä ei saa muuttaa -->
+    <script src="http://appro.mit.jyu.fi/tiea2120/vt/vt1/2020/data.js"></script>
+    <script src="vt3.js"></script>
+    <link rel="StyleSheet" href="tyylit.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tulospalvelu</title>
+</head>
+
+<body>
+    <!-- Tämän tiedoston sisältöä saa muuttaa vapaasti tästä kommentista eteenpäin ! -->
+    <h1>Tulospalvelu</h1>
+
+    <h2>Lisää leimaustapa</h2>
+    <div id="form_leimaustapa_viesti" />
+
+    <form id="form_leimaustapa">
+        <fieldset>
+            <legend>Leimaustavan tiedot</legend>
+            <div class="left">
+                <label for="input_leimaustapa">Leimaustavan tunniste</label>
+                <input id="input_leimaustapa" class="right" type="text" name="leimaustapa" minlength="2" required="required"/> 
+            </div>
+        </fieldset>
+        <button id="button_leimaustapa">Tallenna</button>
+    </form>
+
+    <h2 id="lisaa_joukkue">Lisää joukkue</h2>
+    <div id="form_joukkue_viesti" />
+
+    <form id="form_joukkue">
+        <fieldset>
+            <legend>Joukkueen tiedot</legend>
+            <div class="left">
+                <label for="input_nimi">Nimi</label>
+                <input class="right" type="text" name="nimi" id="input_nimi" minlength="2" required="required"/>
+                <input type="hidden" id="input_id" name="id" value="-1" />
+            </div>
+            <br />
+            <div class="left">
+                <label>Leimaustapa</label>
+                <div class="right align-right" id="div_leimaustavat" />
+            </div>
+            <div class="left">
+                <label>Sarja</label>
+                <div class="right align-right" id="div_sarjat" />
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Jäsenet</legend>
+            <div id="div_jasenet" />
+        </fieldset>
+        <fieldset class="leimaukset" id="div_leimaukset">
+            <legend>Muokkaa leimauksia</legend>
+            <table id="table_leimaukset">
+                <tr>
+                    <th>Rasti</th>
+                    <th>Aika</th>
+                    <th>Poista</th>
+                </tr>
+            </table>
+            <datalist id="datalist_rastit"></datalist>
+        </fieldset>
+    </form>
+
+    <h2>Joukkuelistaus</h2>
+    <div id="joukkuelista"></div>
+
+    <!-- Sivun validoinnin voit tehdä milloin tahansa näppäinyhdistelmällä CTRL+ALT+V -->
+    <script src="http://appro.mit.jyu.fi/tools/validator/validator.user.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jshint/2.11.0/jshint.js"></script>
+    <script src="http://appro.mit.jyu.fi/tools/jshint/jshint.user.js"></script>
+</body>
+
+</html>

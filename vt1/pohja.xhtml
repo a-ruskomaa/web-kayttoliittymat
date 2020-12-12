@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fi" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi">
+<head>
+<meta charset="UTF-8" />
+<title>Viikkotehtävä 1</title>
+<script>
+// apufunktio, jolla voi tehdä oman ohjelman vaatimat tulostukset suoraan html-dokumenttiin
+// tulostaa samat myös konsoliin
+function log() {
+   let pre = document.getElementById("log");
+
+   for (let arg of arguments) {
+            pre.textContent += arg + " ";
+   }
+   pre.textContent += "\n";
+   console.log.apply(undefined, arguments);
+}
+</script>
+</head>
+<body>
+<!-- Tämän tiedoston sisältöä ei saa muuttaa -->
+<pre id="log">Viikkotehtävä 1
+</pre>
+<script src="http://appro.mit.jyu.fi/tiea2120/vt/vt1/2020/data.js"></script>
+<!-- Kirjoita ohjelmakoodisi vt1.js-tiedostoon -->
+<script src="vt1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jshint/2.11.0/jshint.js"></script>
+<script src="http://appro.mit.jyu.fi/tools/jshint/jshint.user.js"></script>
+</body>
+</html>

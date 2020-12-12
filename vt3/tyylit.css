@@ -1,0 +1,33 @@
+div {
+    margin: 0.2em;
+}
+form {
+    max-width: 640px;
+}
+button {
+    margin: 0.2em;
+}
+.right {
+    float:right;
+    clear:right;
+}
+.align-right {
+    text-align: right;
+}
+.left {
+    clear: both;
+}
+.jnimi {
+    font-weight: bold;
+    cursor: pointer;
+}
+#form_viesti {
+    margin-bottom: 0.5em;
+    font-size: large;
+    font-weight: bold;
+    color: green;
+}
+.leimaukset {
+    max-height: 30em;
+    overflow-y: auto;
+}

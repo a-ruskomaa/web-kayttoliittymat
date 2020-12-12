@@ -1,0 +1,50 @@
+div {
+    margin: 0.2em;
+}
+
+form {
+    max-width: 640px;
+}
+
+button {
+    margin: 0.2em;
+}
+
+.container {
+    display: flex;
+    margin: 0.2em;
+}
+
+.container-center {
+    align-items: center;
+}
+
+.item-label {
+    flex-grow: 2;
+}
+
+.item-field {
+    flex-grow: 1;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.left {
+    flex-basis: content;
+    flex-grow: 1;
+}
+
+.center {
+    flex-grow: 0;
+}
+
+.right {
+    flex-grow: 1;
+}
+
+.jasenlist {
+    list-style: none;
+    padding-left: 0px;
+}
